@@ -18,7 +18,8 @@ function Header() {
   return (
     <nav className="shadow-lg fixed right-0 left-0 bg-white">
       <div className="container mx-auto px-6 py-5 flex justify-between items-center">
-        <div className="font-bold text-2xl lg:text-4xl flex items-center">
+        <Link href="/">
+        <a className="font-bold text-2xl lg:text-4xl flex items-center">
           <svg
             className="fill-current h-8 w-8 mr-2"
             width="54"
@@ -31,7 +32,8 @@ function Header() {
           <span className="font-semibold text-xl tracking-tight">
             Product hunt
           </span>
-        </div>
+        </a>
+        </Link>
 
         <div className="block lg:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">

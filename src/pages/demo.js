@@ -43,7 +43,7 @@ export default () => (
         <div className="w-full md:w-1/2">
           <h4 className="text-3xl text-gray-800 font-bold mb-3">easyping</h4>
           <p className="text-gray-600 mb-8">
-            gEvery minute we check whether your website works using servers in
+            Every minute we check whether your website works using servers in
             eight cities across seven countries 🌏. Receive Slack, e-mail and
             SMS notifications in the same minute when something just isn't
             working properly.
