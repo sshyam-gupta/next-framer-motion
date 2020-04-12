@@ -5,7 +5,7 @@ function Footer() {
         <div>© Shyam Gupta</div>
         <div className="inline-flex">
           <LinkItem url="https://github.com/sshyam-gupta" label="GitHub" />
-          <LinkItem url="https://sshyam-gupta@netlify.com" label="Resume" />
+          <LinkItem url="https://sshyam-gupta.netlify.com" label="Resume" />
         </div>
       </section>
     </footer>

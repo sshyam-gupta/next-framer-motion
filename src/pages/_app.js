@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         <Header />
         <Layout>
           <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} key={router.route} />
+            <Component {...pageProps} />
           </AnimatePresence>
         </Layout>
         <Footer />
