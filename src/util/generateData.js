@@ -21,9 +21,9 @@ function generateData(length) {
       image: `https://i.picsum.photos/id/${id * 10}/600/400.jpg`,
       desc: lorem.generateSentences(3),
       likes: Math.round(Math.random() * 10),
-      comments: Array.from(Array(Math.round(Math.random() * 10)), () => {
-        return lorem.generateSentences(1);
-      }),
+      comments: Array.from(Array(Math.round(Math.random())), () => {
+        return lorem.generateWords(10);
+      }).slice(0, 3),
       date:
         index < length / 3
           ? new Date(startOfYesterday()).toISOString()
@@ -39,9 +39,9 @@ export function getData(id) {
     image: `https://i.picsum.photos/id/${id * 10}/600/400.jpg`,
     desc: lorem.generateSentences(3),
     likes: Math.round(Math.random() * 10),
-    comments: Array.from(Array(Math.round(Math.random() * 10)), () => {
-      return lorem.generateSentences(1);
-    }),
+    comments: Array.from(Array(Math.round(Math.random())), () => {
+      return lorem.generateWords(10);
+    }).slice(0, 3),
     date: new Date().toISOString()
   };
 }

@@ -39,7 +39,7 @@ const CardById = ({ response }) => {
               <img
                 className="absolute inset-0 w-full h-full object-cover object-center"
                 src={data.image}
-                alt=""
+                alt={data.name}
               />
 
               <div className="absolute inset-0 w-full h-full bg-indigo-900 opacity-75" />
@@ -55,10 +55,11 @@ const CardById = ({ response }) => {
                 </p>
                 <div className="mt-3 text-indigo-600">
                   <span>{data.likes} likes</span>
+                  <span className="ml-5">{data.comments.length} comment</span>
                 </div>
-                <div className="mt-1 text-indigo-600">
-                  <span>{data.comments.length} comments</span>
-                </div>
+                {data.comments.length ? data.comments.map((comment, index) => (
+                  <div>{comment}</div>
+                )) : null}
               </div>
               <svg
                 className="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-100 -ml-12"
