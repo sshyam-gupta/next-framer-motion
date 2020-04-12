@@ -2,6 +2,7 @@ import "../styles/main.css";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
+import { Head } from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (

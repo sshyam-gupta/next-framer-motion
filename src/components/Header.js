@@ -1,8 +1,17 @@
 import Link from "next/link";
 
 const links = [
-  { href: "https://github.com/zeit/next.js", label: "GitHub" },
-  { href: "https://nextjs.org/docs", label: "Docs" }
+  {
+    href: "https://github.com/sshyam-gupta",
+    label: "GitHub",
+    isExternal: true
+  },
+  {
+    href: "https://sshyam-gupta@netlify.com",
+    label: "Resume",
+    isExternal: true
+  },
+  { href: "/demo", label: "Responsive Test" }
 ];
 
 function Header() {
@@ -39,10 +48,15 @@ function Header() {
 
         <div className="hidden lg:block">
           <ul className="inline-flex">
-            {links.map(({ href, label }) => (
+            {links.map(({ href, label, isExternal }) => (
               <li key={`${href}${label}`}>
                 <Link href={href}>
-                  <a className="px-4 font-bold hover:text-gray-800">{label}</a>
+                  <a
+                    target={isExternal ? "_blank" : ""}
+                    className="px-4 font-bold hover:text-gray-800"
+                  >
+                    {label}
+                  </a>
                 </Link>
               </li>
             ))}
