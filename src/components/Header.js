@@ -17,7 +17,7 @@ const links = [
 function Header() {
   return (
     <nav className="shadow-lg fixed right-0 left-0 bg-white z-10">
-      <div className="container mx-auto px-6 py-5 flex justify-between items-center">
+      <div className="container px-8 py-5 md:px-20 flex justify-between items-center">
         <Link href="/" scroll={false}>
           <a className="font-bold text-2xl lg:text-4xl flex items-center">
             <svg
@@ -29,9 +29,7 @@ function Header() {
             >
               <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
             </svg>
-            <span className="font-semibold text-xl tracking-tight">
-              Name
-            </span>
+            <span className="font-semibold text-xl tracking-tight">Name</span>
           </a>
         </Link>
 

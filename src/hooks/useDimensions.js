@@ -11,4 +11,4 @@ const useDimensions = ref => {
   return dimensions.current;
 };
 
-export default useDimensions
+export default useDimensions;

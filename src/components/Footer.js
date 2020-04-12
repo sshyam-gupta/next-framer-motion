@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="bg-gray-100 fixed bg-gray-100 bottom-0 left-0 right-0">
-      <section className="px-5 py-5 flex justify-between items-center container mx-auto">
+      <section className="px-8 py-3 md:px-20 flex justify-between items-center container">
         <div>© Shyam Gupta</div>
         <div className="inline-flex">
           <LinkItem url="https://github.com/sshyam-gupta" label="GitHub" />

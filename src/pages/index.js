@@ -10,7 +10,7 @@ const Home = ({ response }) => {
 
   return (
     <motion.div
-      className="grid mx-auto p-8"
+      className="grid mx-auto p-8 md:px-20 md:py-10"
       initial="initial"
       animate="enter"
       exit="exit"
