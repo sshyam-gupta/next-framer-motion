@@ -2,15 +2,24 @@ import "../styles/main.css";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
-import { Head } from "next/head";
+import Head from "next/head";
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   return (
     <>
+      <Head>
+        <title>Product Hunt | Shyam</title>
+      </Head>
       <div>
         <Header />
         <Layout>
-          <Component {...pageProps} />
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
         </Layout>
         <Footer />
       </div>

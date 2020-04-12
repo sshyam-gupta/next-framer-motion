@@ -1,5 +1,5 @@
-import { LoremIpsum } from 'lorem-ipsum'
-import { startOfYesterday } from 'date-fns'
+import { LoremIpsum } from "lorem-ipsum";
+import { startOfYesterday } from "date-fns";
 
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
@@ -12,19 +12,38 @@ const lorem = new LoremIpsum({
   }
 });
 
-function generateData (length) {
+function generateData(length) {
   return Array.from(Array(length), (x, index) => {
+    const id = index + 1;
     return {
-      "productName": `Product ${index + 1}`,
-      "image": "https://source.unsplash.com/random/600x400",
-      "desc": lorem.generateSentences(3),
-      "likes": Math.round(Math.random() * 10),
-      "comments": Array.from(Array(Math.round(Math.random() * 10)), () => {
-        return lorem.generateSentences(1)
+      id: id,
+      name: `Product ${id}`,
+      image: `https://i.picsum.photos/id/${id * 10}/600/400.jpg`,
+      desc: lorem.generateSentences(3),
+      likes: Math.round(Math.random() * 10),
+      comments: Array.from(Array(Math.round(Math.random() * 10)), () => {
+        return lorem.generateSentences(1);
       }),
-      "date": index < length / 3 ? new Date(startOfYesterday()).toISOString() : new Date().toISOString()
-    }
-  })
+      date:
+        index < length / 3
+          ? new Date(startOfYesterday()).toISOString()
+          : new Date().toISOString()
+    };
+  });
 }
 
-export default generateData
+export function getData(id) {
+  return {
+    id: id,
+    name: `Product ${id}`,
+    image: `https://i.picsum.photos/id/${id * 10}/600/400.jpg`,
+    desc: lorem.generateSentences(3),
+    likes: Math.round(Math.random() * 10),
+    comments: Array.from(Array(Math.round(Math.random() * 10)), () => {
+      return lorem.generateSentences(1);
+    }),
+    date: new Date().toISOString()
+  };
+}
+
+export default generateData;

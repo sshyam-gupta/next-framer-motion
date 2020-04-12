@@ -12,7 +12,6 @@ class MyDocument extends Document {
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta charSet="utf-8" />
-          <title>Product Hunt | Shyam</title>
           <noscript>
             <h5 className="no-script">
               It looks like your browser has JavaScript disabled.
