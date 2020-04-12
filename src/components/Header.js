@@ -17,7 +17,7 @@ const links = [
 function Header() {
   return (
     <nav className="shadow-lg fixed right-0 left-0 bg-white z-10">
-      <div className="container px-8 py-5 md:px-20 flex justify-between items-center">
+      <div className="px-8 py-5 md:px-20 flex justify-between items-center">
         <Link href="/" scroll={false}>
           <a className="font-bold text-2xl lg:text-4xl flex items-center">
             <svg
