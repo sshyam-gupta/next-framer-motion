@@ -8,9 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "date-fns": "^2.12.0",
+    "framer-motion": "^1.10.3",
+    "isomorphic-fetch": "^2.2.1",
+    "lorem-ipsum": "^2.0.3",
     "next": "9.3.4",
+    "next-absolute-url": "^1.2.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "swr": "^0.2.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",

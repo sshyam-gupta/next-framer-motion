@@ -52,14 +52,23 @@ function Header() {
           <ul className="inline-flex">
             {links.map(({ href, label, isExternal }) => (
               <li key={`${href}${label}`}>
-                <Link href={href}>
-                  <a
-                    target={isExternal ? "_blank" : ""}
-                    className="px-4 font-bold hover:text-gray-800"
-                  >
-                    {label}
-                  </a>
-                </Link>
+                {isExternal ? (
+                    <a
+                    target="_blank"
+                    href={href}
+                      className="px-4 font-bold hover:text-gray-800"
+                    >
+                      {label}
+                    </a>
+                ) : (
+                  <Link href={href}>
+                    <a
+                      className="px-4 font-bold hover:text-gray-800"
+                    >
+                      {label}
+                    </a>
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
